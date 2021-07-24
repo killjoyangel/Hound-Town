@@ -1,17 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
-// import Cors from '.cors';
-
-import Cards from "./dbCards.js";
+const Cors = require('cors');
+const db = require('./config/connection');
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
-
-// const { typeDefs, resolvers } = require('./schemas');
-// const { authMiddleware } = require('./utils/auth');
-
-const db = require('./config/connection');
-
+const Cards = require('dbCards');
+const { typeDefs, resolvers } = require('./schemas');
+const { authMiddleware } = require('./utils/auth');
 
 // App Config
 
