@@ -17,6 +17,7 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "react-router-dom": "^5.2.0"
   }
 }

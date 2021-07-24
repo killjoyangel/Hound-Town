@@ -1,43 +1,24 @@
 const { Schema, model } = require('mongoose');
-const dateFormat = require('../utils/dateFormat');
 
 const petSchema = new Schema({
-  dogText: {
+ dogBreed: {
     type: String,
-    required: 'You need to leave a pet!',
-    minlength: 1,
-    maxlength: 280,
+    required: 'You need to enter a breed!',
     trim: true,
   },
-  dogAuthor: {
+  dogName: {
     type: String,
-    required: true,
+    required: 'You need to enter a name!',
     trim: true,
   },
-  createdAt: {
-    type: Date,
-    default: Date.now,
-    get: (timestamp) => dateFormat(timestamp),
+  dogGender: {
+    type: String,
+    trim: true,
   },
-  comments: [
-    {
-      commentText: {
-        type: String,
-        required: true,
-        minlength: 1,
-        maxlength: 280,
-      },
-      commentAuthor: {
-        type: String,
-        required: true,
-      },
-      createdAt: {
-        type: Date,
-        default: Date.now,
-        get: (timestamp) => dateFormat(timestamp),
-      },
-    },
-  ],
+  dogAge: {
+    type: Integer,
+    trim: true,
+  },
 });
 
 const Pets = model('Pets', petSchema);
