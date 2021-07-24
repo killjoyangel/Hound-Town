@@ -46,7 +46,7 @@ const outOfFrame = (name) => {
         ))}
       </div>
     </div>
-  );
+  )
+};
 
-        }
 export default TinderCards;
