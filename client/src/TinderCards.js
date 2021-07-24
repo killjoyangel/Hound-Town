@@ -4,27 +4,26 @@ import "./TinderCards.css";
 import axios from "./axios";
 
 function TinderCards() {
-  const [pets, setPets] = useState([])
+  const [pets, setPets] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
-      const req = await axios.get('/tinder/cards');
+      const req = await axios.get("/tinder/cards");
 
       setPets(req.data);
     }
 
     fetchData();
   }, []);
-  
- console.log(pets)
 
-const swiped = (direction, nameToDelete) => {
+  console.log(pets);
+
+  const swiped = (direction, nameToDelete) => {
     console.log("removing: " + nameToDelete);
-
-};
-const outOfFrame = (name) => {
+  };
+  const outOfFrame = (name) => {
     console.log(name + " left the screen");
-}
+  };
 
   return (
     <div className="tinderCards">
@@ -37,11 +36,9 @@ const outOfFrame = (name) => {
             onSwipe={(dir) => swiped(dir, pet.name)}
             onCardLeftScreen={() => outOfFrame(pet.name)}
           >
-              <div style={{ backgroundImage: `${pet.image}`}}
-              className="card"
-              >
-                  <h3>{pet.name}</h3>
-                  </div>
+            <div style={{ backgroundImage: `${pet.image}` }} className="card">
+              <h3>{pet.name}</h3>
+            </div>
           </TinderCard>
         ))}
       </div>
