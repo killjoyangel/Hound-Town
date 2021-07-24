@@ -1,12 +1,5 @@
 const express = require('express');
 const mongoose = require('mongoose');
-<<<<<<< HEAD
-
-
-// import Cors from 'cors';
-
-// import Cards from "./dbCards.js";
-=======
 // import Cors from '.cors';
 
 import Cards from "./dbCards.js";
@@ -18,7 +11,6 @@ const path = require('path');
 // const { authMiddleware } = require('./utils/auth');
 
 const db = require('./config/connection');
->>>>>>> d163e6fddf75267b4483994a4bddc11d97f91336
 
 
 // App Config
