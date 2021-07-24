@@ -43,6 +43,12 @@ function TinderCards() {
         ))}
       </div>
     </div>
+<<<<<<< HEAD
   );
 };
+=======
+  )
+};
+
+>>>>>>> c3f40e38306a85efb0217d519aebd8c9e7b48131
 export default TinderCards;
