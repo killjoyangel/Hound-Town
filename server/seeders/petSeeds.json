@@ -1,0 +1,33 @@
+  [
+    {
+      "dogBreed": "French Bulldog",
+      "dogName": "Stella",
+      "dogGender":"Female",
+      "dogAge": "3"
+    },
+    {
+      "dogBreed": "",
+      "dogName": "",
+      "dogGender":"",
+      "dogAge": ""
+    },
+    {
+      "dogBreed": "",
+      "dogName": "",
+      "dogGender":"",
+      "dogAge": ""
+    },
+    {
+      "dogBreed": "",
+      "dogName": "",
+      "dogGender":"",
+      "dogAge": ""
+    },
+    {
+      "dogBreed": "",
+      "dogName": "",
+      "dogGender":"",
+      "dogAge": ""
+    }
+  ]
+  
