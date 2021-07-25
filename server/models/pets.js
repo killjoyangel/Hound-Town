@@ -16,11 +16,11 @@ const petSchema = new Schema({
     trim: true,
   },
   dogAge: {
-    type: Integer,
-    trim: true,
+    type: String, 
+     trim: true,
   },
 });
 
 const Pets = model('Pets', petSchema);
 
-module.exports = pets;
+module.exports = Pets;
