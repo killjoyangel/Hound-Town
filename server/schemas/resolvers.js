@@ -10,13 +10,13 @@ const resolvers = {
     user: async (parent, { username }) => {
       return User.findOne({ username }).populate('pets');
     },
-    pet: async (parent, { username }) => {
-      const params = username ? { username } : {};
-      return Pet.find(params).sort({ createdAt: -1 });
-    },
-    pet: async (parent, { petId }) => {
-      return Pet.findOne({ _id: petId });
-    },
+    // pet: async (parent, { username }) => {
+    //   const params = username ? { username } : {};
+    //   return Pet.find(params).sort({ createdAt: -1 });
+    // },
+    // pet: async (parent, { petId }) => {
+    //   return Pet.findOne({ _id: petId });
+    // },
     me: async (parent, args, context) => {
       if (context.user) {
         return User.findOne({ _id: context.user._id }).populate('pets');
@@ -65,22 +65,22 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
-    removePet: async (parent, { petId }, context) => {
-      if (context.user) {
-        const pet = await Pet.findOneAndDelete({
-          _id: petId,
-          petAuthor: context.user.username,
-        });
+    // removePet: async (parent, { petId }, context) => {
+    //   if (context.user) {
+    //     const pet = await Pet.findOneAndDelete({
+    //       _id: petId,
+    //       petAuthor: context.user.username,
+    //     });
 
-        await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $pull: { pets: pet._id } }
-        );
+    //     await User.findOneAndUpdate(
+    //       { _id: context.user._id },
+    //       { $pull: { pets: pet._id } }
+    //     );
 
-        return pet;
-      }
-      throw new AuthenticationError('You need to be logged in!');
-    },
+    //     return pet;
+    //   }
+    //   throw new AuthenticationError('You need to be logged in!');
+    // },
 }
 }
 
