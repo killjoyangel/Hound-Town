@@ -14,8 +14,10 @@ function Header() {
 
       <img
         className="header_logo"
-        src="https://seeklogo.com/images/T/tinder-logo-6451FE2578-seeklogo.com.png"
-        alt=""
+        src=".img/public/images/Pawlogo.png"
+        alt="logo"
+username
+
       />
 <IconButton>
 <ForumIcon fontSize="large" className="header_icon" />
