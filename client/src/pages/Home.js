@@ -1,37 +1,80 @@
-// import React from 'react';
-// import { useQuery } from '@apollo/client';
+import React, { Component } from "react";
 
-// import ThoughtList from '../components/ThoughtList';
-// import ThoughtForm from '../components/ThoughtForm';
+class Home extends Component {
+  render() {
+    return (
+      <Container className="home" mt="20vh" p="40px">
+        <Typography fs="64px" fw="700" ta="center" w="100%">
+          Pawsitively.The.Best.
+        </Typography>
+        <Typography fs="32px" fw="600" ta="center" w="100%" style= {{padding:"2rem",blur:"60%",backgroundColor:"black"}} >
+          Some days are simply meant for playing. 
+        </Typography>
+      </Container>
+    );
+  }
+}
 
-// import { QUERY_THOUGHTS } from '../utils/queries';
+export default Home;
 
-// const Home = () => {
-//   const { loading, data } = useQuery(QUERY_THOUGHTS);
-//   const thoughts = data?.thoughts || [];
+function Typography(props) {
+  return (
+    <span
+      style={{
+        display: props.d,
+        fontSize: props.fs,
+        color: props.c,
+        textAlign: props.ta,
+        width: props.w,
+        fontWeight: props.fw,
+        padding: props.p,
+      }}
+    >
+      {props.children}
+    </span>
+  );
+}
 
-//   return (
-//     <main>
-//       <div className="flex-row justify-center">
-//         <div
-//           className="col-12 col-md-10 mb-3 p-3"
-//           style={{ border: '1px dotted #1a1a1a' }}
-//         >
-//           <ThoughtForm />
-//         </div>
-//         <div className="col-12 col-md-8 mb-3">
-//           {loading ? (
-//             <div>Loading...</div>
-//           ) : (
-//             <ThoughtList
-//               thoughts={thoughts}
-//               title="Some Feed for Thought(s)..."
-//             />
-//           )}
-//         </div>
-//       </div>
-//     </main>
-//   );
-// };
+Typography.defaultProps = {
+  d: "inline-block",
+  fs: "16px",
+  c: "white",
+  ta: "left",
+  w: "inherit",
+  fw: "400",
+  p: "0px",
+};
 
-// export default Home;
+function Container(props) {
+  return (
+    <div
+      style={{
+        display: props.d,
+        fontSize: props.fs,
+        color: props.c,
+        textAlign: props.ta,
+        width: props.w,
+        margin: "0 auto",
+        maxWidth: "80%",
+        backgroundColor: props.bgc,
+        flexWrap: props.fw,
+        marginTop: props.mt,
+        padding: props.p,
+      }}
+    >
+      {props.children}
+    </div>
+  );
+}
+
+Container.defaultProps = {
+  p: "0px",
+  mt: "0px",
+  bgc: "inherit",
+  d: "flex",
+  fw: "wrap",
+  c: "white",
+  fs: "16px",
+  ta: "left",
+  w: "inherit",
+};
