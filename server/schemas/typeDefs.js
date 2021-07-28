@@ -20,10 +20,10 @@ const typeDefs = gql`
   input petInput {
     petId: String
     username: String!
-    description: String
-    title: String
-    image: String
-    link: String
+   dogName: String
+  dogBreed: String
+   dogGender: String
+    dogAge: String
   } 
 
   type Auth {
@@ -42,7 +42,7 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String! pets: String): Auth
     login(email: String!, password: String!): Auth
     addPet(username: String!,  dogBreed: String!, dogName: String!, dogGender: String, dogAge: String ): Pet
-    savePet(username: String!,  dogBreed: String!, dogName: String!, dogGender: String, dogAge: String ): Pet
+    # savePet(username: String!,  dogBreed: String!, dogName: String!, dogGender: String, dogAge: String ): Pet
     removePet(username: String!,  dogBreed: String!, dogName: String!, dogGender: String, dogAge: String ): Pet
   }
 `;

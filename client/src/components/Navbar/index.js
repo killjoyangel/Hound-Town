@@ -51,8 +51,11 @@ function NavBar() {
             </div>
           </li>
           <li className="nav-item">
-            <Link to="/playdate" className="nav-link">
+            {/* <Link to="/playdate" className="nav-link">
              Liked Doggos 
+            </Link> */}
+             <Link to="/home" className="nav-link">
+             Add a Pet
             </Link>
           </li>
           <li className="nav-item">

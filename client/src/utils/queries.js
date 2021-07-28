@@ -7,12 +7,23 @@ export const GET_ME = gql`
       username
       email
       pets {
-        petId
-        image
-        link
-        title
-        description
+        dogBreed
+        dogAge
+        dogGender
+        dogName
       }
+    }
+  }
+`;
+
+export const QUERY_PETS = gql`
+  query getPets {
+    pets {
+      _id
+      dogBreed
+      dogAge
+      dogGender
+      dogName
     }
   }
 `;
