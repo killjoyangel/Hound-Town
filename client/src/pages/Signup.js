@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useMutation } from '@apollo/client';
 import { Form, Button, Alert } from 'react-bootstrap';
-// import { BrowserRouter as Route} from "react-router-dom";
-// import { Link } from 'react-router-dom';
-// import Login from "./Login";
 
 import { ADD_USER } from '../utils/mutations'
 import Auth from '../utils/auth';

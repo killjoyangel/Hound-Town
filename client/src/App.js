@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import {
   ApolloClient,
   InMemoryCache,
@@ -6,7 +6,7 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import { BrowserRouter as Router,Route, Switch} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import "./App.css";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
@@ -37,8 +37,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-class App extends Component {
-  render() {
+function App () {
     return (
       <ApolloProvider client={client}>
         <Router>
@@ -57,7 +56,7 @@ class App extends Component {
       </ApolloProvider>
     );
   }
-}
+// }
 
 export default App;
 
