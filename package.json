@@ -17,17 +17,8 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "apollo-server-express": "^3.0.2",
-    "bcrypt": "^5.0.1",
-    "express": "^4.17.1",
-    "graphql": "^15.5.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.13.3",
-=======
     "@apollo/client": "^3.3.21",
     "graphql": "^15.5.1",
->>>>>>> 99ae2549237dd04978109e9568ee53e62d708f58
     "nodemon": "^2.0.12",
     "react-dom": "^16.14.0",
     "react-mdl": "^2.1.0",
