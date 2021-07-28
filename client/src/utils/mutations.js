@@ -31,11 +31,10 @@ mutation savePet($petData: petInput!) {
     username
     email
     pets {
-      petId
-      image
-      description
-      title
-      link
+      dogBreed
+      dogAge
+      dogGender
+      dogName
     }
   }
 }
@@ -48,14 +47,13 @@ mutation removePet($petId: ID!) {
     username
     email
     pets {
-      petId
-      image
-      description
-      title
-      link
+      dogBreed
+      dogAge
+      dogGender
+      dogName
+    }
     }
   }
-}
 `;
 
 
