@@ -6,28 +6,28 @@
       "dogAge": "3"
     },
     {
-      "dogBreed": "",
-      "dogName": "",
-      "dogGender":"",
-      "dogAge": ""
+      "dogBreed": "Pitbull",
+      "dogName": "Elvis",
+      "dogGender":"Male",
+      "dogAge": "4"
     },
     {
-      "dogBreed": "",
-      "dogName": "",
-      "dogGender":"",
-      "dogAge": ""
+      "dogBreed": "Mixed",
+      "dogName": "Snickers",
+      "dogGender":"Male",
+      "dogAge": "10"
     },
     {
-      "dogBreed": "",
-      "dogName": "",
-      "dogGender":"",
-      "dogAge": ""
+      "dogBreed": "Hound-mix",
+      "dogName": "Booker",
+      "dogGender":"Male",
+      "dogAge": "5"
     },
     {
-      "dogBreed": "",
-      "dogName": "",
-      "dogGender":"",
-      "dogAge": ""
+      "dogBreed": "Yorkie",
+      "dogName": "Tin-Tin",
+      "dogGender":"Female",
+      "dogAge": "1"
     }
   ]
   
