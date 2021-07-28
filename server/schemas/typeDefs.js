@@ -5,17 +5,26 @@ const typeDefs = gql`
     _id: ID
     username: String
     email: String
-    password: String
     pets: [Pet]!
   }
 
   type Pet {
-  username: String!
+   _id: String
+   username: String!
    dogName: String!
    dogBreed: String!
    dogGender: String
-   dogAge: Int
+   dogAge: String
   }
+
+  input petInput {
+    petId: String
+    username: String!
+    description: String
+    title: String
+    image: String
+    link: String
+  } 
 
   type Auth {
     token: ID!
@@ -29,20 +38,12 @@ const typeDefs = gql`
     me: User
   }
 
-  input PutInput {
-    bookId: String
-    authors: [String]
-    description: String
-    title: String
-    image: String
-    link: String
-  } 
-
   type Mutation {
     addUser(username: String!, email: String!, password: String! pets: String!): Auth
     login(email: String!, password: String!): Auth
-    addPet(username: String!,  dogBreed: String!, dogName: String!, dogGender: String,   dogAge: Int ): Pet
-   
+    addPet(username: String!,  dogBreed: String!, dogName: String!, dogGender: String, dogAge: String ): Pet
+    savePet(username: String!,  dogBreed: String!, dogName: String!, dogGender: String, dogAge: String ): Pet
+    removePet(username: String!,  dogBreed: String!, dogName: String!, dogGender: String, dogAge: String ): Pet
   }
 `;
 
