@@ -4,18 +4,42 @@ const { Schema } = require('mongoose');
 const petSchema = new Schema({
   dogBreed: {
     type: String,
+    minlength:1,
+    maxlenght:20,
     required: 'You need to enter a breed!',
     trim: true,
   },
   dogName: {
     type: String,
+    minlength:1,
+    maxlenght:20,
     required: 'You need to enter a name!',
     trim: true,
   },
-  dogGender: {
-    type: String,
-    trim: true,
+  dogGender:{
+  type: String,
+  minlength:1,
+  maxlenght:7,
+  required: 'You need to enter a gender!',
+  trim: true,
   },
+  dogAge:{
+    type: String,
+    minlength:1,
+    maxlenght:2,
+    required: 'You need to enter an age!',
+    trim: true,
+    },
+    User: {
+      type:Schema.Types.ObjectId,
+      ref: 'User'
+    }
+
+});
+
+const Pet = model('Pets', petSchema);
+module.exports = Pet;
+=======
   dogAge: {
     type: String, 
      trim: true,

@@ -11,6 +11,7 @@ import "./App.css";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import Navbar from "./components/Navbar";
+import PetForm from "./components/PetForm";
 
 
 // Construct our main GraphQL API endpoint
@@ -51,8 +52,10 @@ function App () {
         <Route exact path="/Login">
          <Login />
          </Route>
+         <PetForm />
          </Switch>
         </Router>
+     
       </ApolloProvider>
     );
   }

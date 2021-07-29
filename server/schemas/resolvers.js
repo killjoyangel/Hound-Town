@@ -50,11 +50,11 @@ const resolvers = {
     //   return { token, user };
     // },
     
-    savePet: async (parent, {petText}, context) => {
+    addPet: async (parent, {petText}, context) => {
       if (context.user) {
         const updatedUser = await User.findByIdAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { savedBooks: bookData } },
+          { $addToSet: { addPet: petData } },
           { new: true }
         );
         return updatedUser;
