@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import "./App.css";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
-import Navbar from "./components/Navbar";
+import MyNavbar from "./components/Navbar";
 
 
 // Construct our main GraphQL API endpoint
@@ -41,7 +41,7 @@ function App () {
     return (
       <ApolloProvider client={client}>
         <Router>
-        <Navbar/>
+        <MyNavbar/>
         <div className="container"></div>
         <h1>Hound Town</h1>
         <Switch>
