@@ -11,7 +11,6 @@ import "./App.css";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Navbar from "./components/Navbar";
-// import PetForm from "./pages/PetForm";
 
 
 // Construct our main GraphQL API endpoint
