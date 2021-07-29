@@ -1,0 +1,33 @@
+  [
+    {
+      "dogBreed": "French Bulldog",
+      "dogName": "Stella",
+      "dogGender":"Female",
+      "dogAge": "3"
+    },
+    {
+      "dogBreed": "Pitbull",
+      "dogName": "Elvis",
+      "dogGender":"Male",
+      "dogAge": "4"
+    },
+    {
+      "dogBreed": "Mixed",
+      "dogName": "Snickers",
+      "dogGender":"Male",
+      "dogAge": "10"
+    },
+    {
+      "dogBreed": "Hound-mix",
+      "dogName": "Booker",
+      "dogGender":"Male",
+      "dogAge": "5"
+    },
+    {
+      "dogBreed": "Yorkie",
+      "dogName": "Tin-Tin",
+      "dogGender":"Female",
+      "dogAge": "1"
+    }
+  ]
+  
