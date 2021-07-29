@@ -20,15 +20,11 @@ const userSchema = new Schema(
       type: String,
       required: true,
       unique: true,
-
-      match: [/.+@.+\..+/, 'Must match an email address!'],
       match: [/.+@.+\..+/, 'Must use a valid email address'],
-
     },
     password: {
       type: String,
       required: true,
-
       minlength: 1,
     },
     Pets: [
