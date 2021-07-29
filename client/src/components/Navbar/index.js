@@ -48,10 +48,7 @@ function MyNavbar () {
       <Nav.Link as={NavLink} to="/AddPet">Add Pet</Nav.Link>
       <Nav.Link as={NavLink} to="/FindAFriend">FindAFriend</Nav.Link>
       <Nav.Link as={NavLink} to="/SavePetProfile">Matches</Nav.Link>
-      {Auth.loggedIn() ?  <Nav.Link as={NavLink} to="/Login" onClick={handleLogout}>Logout</Nav.Link> : <Nav.Link as={NavLink} to="/Login">Login</Nav.Link>}
-   
-
-     
+      {Auth.loggedIn() ?  <Nav.Link as={NavLink} to="/Login" onClick={handleLogout}>Logout</Nav.Link> : <Nav.Link as={NavLink} to="/Login">Login</Nav.Link>} 
     </Nav>
   </Navbar.Collapse>
   </Container>
