@@ -8,8 +8,8 @@ import {
 import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import "./App.css";
-import Signup from "./pages/Signup";
-import Login from "./pages/Login";
+import Signup from "./components/Signup";
+import Login from "./components/Login";
 import Navbar from "./components/Navbar";
 import PetForm from "./components/PetForm";
 
@@ -59,6 +59,6 @@ function App () {
       </ApolloProvider>
     );
   }
-// }
 
+  
 export default App;
