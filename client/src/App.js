@@ -10,8 +10,10 @@ import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import "./App.css";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
-import Navbar from "./components/Navbar";
-// import PetForm from "./components/PetForm";
+import AddPet from "./pages/AddPet";
+import SavePetProfile from "./pages/SavePetProfile";
+import MyNavbar from "./components/Navbar";
+import FindAFriend from "./pages/FindAFriend";
 
 
 // Construct our main GraphQL API endpoint
@@ -42,7 +44,7 @@ function App () {
     return (
       <ApolloProvider client={client}>
         <Router>
-        <Navbar/>
+        <MyNavbar/>
         <div className="container"></div>
         <h1>Hound Town</h1>
         <Switch>
@@ -52,7 +54,15 @@ function App () {
         <Route exact path="/Login">
          <Login />
          </Route>
-         {/* <PetForm /> */}
+         <Route exact path="/SavePetProfile">
+         <SavePetProfile />
+         </Route>
+         <Route exact path="/AddPet">
+         <AddPet />
+         </Route>
+         <Route exact path="/FindAFriend">
+         <FindAFriend />
+         </Route>
          </Switch>
         </Router>
       </ApolloProvider>
