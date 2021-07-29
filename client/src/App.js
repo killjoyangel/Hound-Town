@@ -52,7 +52,7 @@ function App () {
         <Route exact path="/Login">
          <Login />
          </Route>
-         <PetForm />
+         {/* <PetForm /> */}
          </Switch>
         </Router>
      
