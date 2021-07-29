@@ -11,7 +11,6 @@ import "./App.css";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Navbar from "./components/Navbar";
-import PetForm from "./components/PetForm";
 
 
 // Construct our main GraphQL API endpoint
@@ -52,13 +51,15 @@ function App () {
         <Route exact path="/Login">
          <Login />
          </Route>
+<<<<<<< HEAD
          {/* <PetForm /> */}
+=======
+>>>>>>> 57402ee269189d9f7ceb85afcc24bb2628d6aaff
          </Switch>
         </Router>
-     
       </ApolloProvider>
     );
   }
-// }
 
+  
 export default App;

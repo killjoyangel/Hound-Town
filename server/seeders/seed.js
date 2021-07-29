@@ -4,16 +4,35 @@ const userSeeds = require('./userSeeds.json');
 const petSeeds = require('./petSeeds.json');
 
 db.once('open', async () => {
-  try {
     await Pet.deleteMany({});
     await User.deleteMany({});
 
-    await User.create(userSeeds);
+  const pets = await Pet.insertMany(petSeeds);
+  const users = await User.insertMany(userSeeds);
+  // tempUser.petSeeds.push(newPet._id);
+  // await tempUser.save();
+  console.log('everything seeded!');
+  process.exit(0);
+});
 
-    for (let i = 0; i < petSeeds.length; i++) {
-      const { _id, thoughtAuthor } = await Pet.create(petSeeds[i]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*await User.create(userSeeds);
+    for (let i = 0; i < userSeeds.length; i++) {
+      const { _id, dogName } = await Pet.create(petSeeds[i]);
       const user = await User.findOneAndUpdate(
-        { username: thoughtAuthor },
+        { username: dogName },
         {
           $addToSet: {
             thoughts: _id,
@@ -24,8 +43,8 @@ db.once('open', async () => {
   } catch (err) {
     console.error(err);
     process.exit(1);
-  }
+  }*/
 
-  console.log('all done!');
-  process.exit(0);
-});
+  //console.log('all done!'),
+ // process.exit(0)
+

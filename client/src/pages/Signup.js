@@ -109,8 +109,7 @@ const Signup = () => {
           variant='success'>
           Submit
         </Button>
-       
-        <Button onClick={() => window.location.href="/Login"}>Or login instead!</Button>
+        {/* <Button onClick={() => window.location.href="/Login"}>Or login instead!</Button> */}
  
       </Form>
     </>
