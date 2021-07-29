@@ -1,6 +1,5 @@
 const db = require('../config/connection');
 const { User, Pet } = require('../models');
-
 const userSeeds = require('./userSeeds.json');
 const petSeeds = require('./petSeeds.json');
 
@@ -9,11 +8,9 @@ db.once('open', async () => {
     await User.deleteMany({});
 
   const pets = await Pet.insertMany(petSeeds);
-   const users = await User.insertMany(userSeeds);
+  const users = await User.insertMany(userSeeds);
   // tempUser.petSeeds.push(newPet._id);
   // await tempUser.save();
- 
-
   console.log('everything seeded!');
   process.exit(0);
 });

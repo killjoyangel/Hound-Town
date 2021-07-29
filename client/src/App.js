@@ -6,21 +6,17 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import "./App.css";
-import Header from "./components/Header";
-//import Home from "./pages/Home";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
-import Profile from "./pages/Profile";
+import Navbar from "./components/Navbar";
+import PetForm from "./components/PetForm";
 
-import TinderCards from "./TinderCards";
-import SwipeButtons from "./SwipeButtons";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
-  uri: "/graphql", 
+  uri: "/graphql",
 });
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header
@@ -42,39 +38,27 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-function App() {
-  return (
-    <ApolloProvider client={client}>
-      <Router>
-          {/* <Header /> */}
-          <TinderCards />
-          <SwipeButtons />
-        <div className="flex-column justify-flex-start min-100-vh">
-        <Header />
-          <div className="container">
-            <Route exact path="/">
-             {/* <Home /> */}
-            </Route>
-            <Route exact path="/login">
-              <Login />
-            </Route>
-            <Route exact path="/signup">
-              <Signup />
-            </Route>
-            <Route exact path="/me">
-              <Profile />
-            </Route>
-            <Route exact path="/profiles/:username">
-              <Profile />
-            </Route>
-            {/* <Route exact path="/thoughts/:thoughtId">
-                <SingleThought />
-              </Route> */}
-          </div>
-        </div>
-      </Router>
-    </ApolloProvider>
-  );
-}
+function App () {
+    return (
+      <ApolloProvider client={client}>
+        <Router>
+        <Navbar/>
+        <div className="container"></div>
+        <h1>Hound Town</h1>
+        <Switch>
+        <Route exact path="/Signup">
+          <Signup />
+        </Route>
+        <Route exact path="/Login">
+         <Login />
+         </Route>
+         <PetForm />
+         </Switch>
+        </Router>
+     
+      </ApolloProvider>
+    );
+  }
+// }
 
 export default App;

@@ -2,7 +2,6 @@
 * Overview
  - Welcome to your third and final group project! This project serves as your best opportunity to showcase all the skills you’ve learned throughout this course and collaborate with the community of developers you’ve cultivated over the past six months. You’ll work with your group to build a performant and scalable MERN stack single-page application that fulfills a real-world need, with a focus on data and user demand. 
 
-hey yo
 
 ## Table of Content
 - [Project-3-Unit-23](#project-3-unit-23)
