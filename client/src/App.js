@@ -11,10 +11,10 @@ import "./App.css";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import AddPet from "./pages/AddPet";
-import SavePetProfile from "./pages/SavePetProfile";
 import MyNavbar from "./components/Navbar";
 import FindAFriend from "./pages/FindAFriend";
 import MeetUps from "./pages/MeetUps";
+import Events from "./pages/Events";
 
 
 // Construct our main GraphQL API endpoint
@@ -46,17 +46,14 @@ function App () {
       <ApolloProvider client={client}>
         <Router>
         <MyNavbar/>
-        <div className="container"></div>
-        <h1>Hound Town</h1>
+        <div className="container">
+        <h1>Your Puppy Party Portal</h1>
         <Switch>
         <Route exact path="/Signup">
           <Signup />
         </Route>
         <Route exact path="/Login">
          <Login />
-         </Route>
-         <Route exact path="/SavePetProfile">
-         <SavePetProfile />
          </Route>
          <Route exact path="/AddPet">
          <AddPet />
@@ -67,7 +64,11 @@ function App () {
          <Route exact path="/MeetUps">
          <MeetUps/>
          </Route>
+         <Route exact path="/Events">
+         <Events/>
+         </Route>
          </Switch>
+         </div>
         </Router>
       </ApolloProvider>
     );

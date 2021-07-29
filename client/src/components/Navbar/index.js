@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink} from  "react-router-dom";
 import "./Navbar.css";
 import UserContext from "./UserContext";
 import {Navbar, Nav, Container} from 'react-bootstrap'
@@ -43,13 +43,14 @@ function MyNavbar () {
   <Navbar.Brand as={NavLink} exact to="/">Hound Town</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav className="me-auto">
+  <Nav className="me-auto">
       <Nav.Link as={NavLink} to="/Signup">Signup</Nav.Link>
+      <Nav.Link as={NavLink} to="/Signup">Login</Nav.Link>
+      {Auth.loggedIn() ?  <Nav.Link as={NavLink} to="/Login" onClick={handleLogout}>Logout</Nav.Link> : <Nav.Link as={NavLink} to="/Login">Login</Nav.Link>}
       <Nav.Link as={NavLink} to="/AddPet">Add Pet</Nav.Link>
-      <Nav.Link as={NavLink} to="/FindAFriend">Find A Friend</Nav.Link>
-      <Nav.Link as={NavLink} to="/SavePetProfile">Matches</Nav.Link>
-      <Nav.Link as={NavLink} to="/MeetUps">Meet Ups</Nav.Link>
-      {Auth.loggedIn() ?  <Nav.Link as={NavLink} to="/Login" onClick={handleLogout}>Logout</Nav.Link> : <Nav.Link as={NavLink} to="/Login">Login</Nav.Link>} 
+      <Nav.Link as={NavLink} to="/FindAFriend">FindAFriend</Nav.Link>
+      <Nav.Link as={NavLink} to="/MeetUps">MeetUps</Nav.Link>   
+      <Nav.Link as={NavLink} to="/Events">Events</Nav.Link> 
     </Nav>
   </Navbar.Collapse>
   </Container>
