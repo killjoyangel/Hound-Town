@@ -11,6 +11,7 @@ import "./App.css";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer/Footer"
 
 
 // Construct our main GraphQL API endpoint
@@ -44,6 +45,9 @@ function App () {
         <Navbar/>
         <div className="container"></div>
         <h1>Hound Town</h1>
+        <div className="bottom-container">
+          <Footer/>
+        </div>
         <Switch>
         <Route exact path="/Signup">
           <Signup />

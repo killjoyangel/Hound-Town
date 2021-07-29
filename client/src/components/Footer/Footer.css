@@ -1,0 +1,16 @@
+.footer {
+  margin: 1rem;
+  padding: 25px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  flex-direction: column;
+  background-color: blanchedalmond;
+  margin: auto;
+}
+
+p {
+  font-size: 22px;
+  font-family: 25px;
+}

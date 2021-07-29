@@ -70,6 +70,11 @@ function NavBar() {
               Logout
             </Link>
           </li>
+          <li className="nav-item" target="_blank">
+            <a href='https://maps.google.com/'>
+              Find a Park in Your Area
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
