@@ -8,10 +8,10 @@ import {
 import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import "./App.css";
-import Signup from "./components/Signup";
-import Login from "./components/Login";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
 import Navbar from "./components/Navbar";
-import PetForm from "./components/PetForm";
+// import PetForm from "./pages/PetForm";
 
 
 // Construct our main GraphQL API endpoint
@@ -52,10 +52,8 @@ function App () {
         <Route exact path="/Login">
          <Login />
          </Route>
-         <PetForm />
          </Switch>
         </Router>
-     
       </ApolloProvider>
     );
   }
