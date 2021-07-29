@@ -24,12 +24,12 @@ addUser(username: $username, password: $password, email: $email) {
 }
 `;
 
-export const SAVE_PET = gql`
-mutation savePet($petData: petInput!) {
-  savePet(petData: $petData) {
-    _id
-    username
-    email
+export const ADD_PET = gql`
+mutation addPet($petData: petInput!) {
+  addPet(petData: $petData) {
+    # _id
+    # username
+    # email
     pets {
       dogBreed
       dogAge
