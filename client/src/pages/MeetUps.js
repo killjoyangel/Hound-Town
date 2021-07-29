@@ -41,7 +41,7 @@ const NewPlayDate = (props) => {
 
   return (
     <div className="container" style={mystyle}>
-      <h1>Submit an Event</h1>
+      <h1>Submit an Event Idea</h1>
       <MeetUpForm
         handleSubmit={handleSubmit}
         setName={setName}
