@@ -1,78 +1,40 @@
 import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
-// import "./style.css";
+import "./Navbar.css";
 import UserContext from "./UserContext";
+import { Header, Navigation} from "react-mdl";
 
-
-function NavBar() {
+function Navbar() {
   const user = useContext(UserContext);
   const history = useHistory();
 
   function handleLogout() {
     // console.log("handle logout")
     user.handleLogin("");
-    history.push("/login");
+    history.push("/Login");
   }
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark secondary-color lighten-1">
-      <Link to="/" className="navbar-brand">
-        Hound Town
-      </Link>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#basicExampleNav"
-        aria-controls="basicExampleNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="basicExampleNav">
-        <ul className="navbar-nav mr-auto">
-          <li className="nav-item dropdown">
-            <a
-              className="nav-link dropdown-toggle"
-              id="navbarDropdownMenuLink"
-              data-toggle="dropdown"
-              href="/"
-            >
-            </a>
-            <div
-              className="dropdown-menu dropdown-primary"
-              aria-labelledby="navbarDropdownMenuLink"
-            >
-              <Link to="/Petprofile" className="dropdown-item">
-                Profile
-              </Link>
-            </div>
-          </li>
-          <li className="nav-item">
-            <Link to="/playdate" className="nav-link">
-             Liked Doggos 
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/signup" className="nav-link">
-              Sign Up
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/login" className="nav-link">
-              Login
-            </Link>
-          </li>
-          <li className="nav-item" onClick={handleLogout}>
-            <Link to="/" className="nav-link">
-              Logout
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <Header>
+      <Navigation>
+        <br></br>
+          <Link to="/">Hound Town</Link>
+          <br></br>
+          <Link to="/AddPet">Add Pet</Link>
+          <br></br>
+          <Link to="/Petprofile">Pet Profile</Link>
+          <br></br>
+          <Link to="/playdate">Matches</Link>
+          <br></br>
+          <Link to="/signup">Sign Up</Link>
+          <Link to="/login">Login</Link>
+          <ul className="mx-1" onClick={handleLogout}>
+            <Link to="/">Logout</Link>
+          </ul>
+          </Navigation>
+    </Header>
   );
 }
-export default NavBar;
+
+export default Navbar;
