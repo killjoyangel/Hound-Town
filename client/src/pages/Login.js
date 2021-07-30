@@ -75,9 +75,6 @@ const Login = () => {
             value={userFormData.email}
             required
           />
-          {/* <Form.Control.Feedback type="invalid">
-            Email is required!
-          </Form.Control.Feedback> */}
         </Form.Group>
 
         <Form.Group>
@@ -90,9 +87,6 @@ const Login = () => {
             value={userFormData.password}
             required
           />
-          {/* <Form.Control.Feedback type="invalid">
-            Password is required!
-          </Form.Control.Feedback> */}
         </Form.Group>
         <Button
           disabled={!(userFormData.email && userFormData.password)}
