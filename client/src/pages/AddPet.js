@@ -1,30 +1,37 @@
 import React, { useState } from "react";
-// import axios from "axios";
+import { useHistory } from "react-router-dom"
 import ProfileForm from "./ProfileForm";
-import {useMutation} from "@apollo/client";
-import {ADD_PET} from "../utils/mutations";
+import { useMutation } from "@apollo/client";
+import { ADD_PET } from "../utils/mutations";
 
 const AddPet = (props) => {
   const [dogBreed, setBreed] = useState("");
   const [dogAge, setAge] = useState("");
   const [dogGender, setGender] = useState("");
   const [dogName, setName] = useState("");
+  const [addPet, { error }] = useMutation(ADD_PET);
+  let history = useHistory()
   
-  const [addPet, {error}]  = useMutation(ADD_PET) 
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
       const { data } = await addPet({
         variables: {
-          dogAge, dogBreed, dogGender, dogName,
+          dogAge,
+          dogBreed,
+          dogGender,
+          dogName,
         },
       });
-      console.log(data)
+      console.log(data);
+      setBreed("");
+      setAge("");
+      setGender("");
+      setName("");
+      history.push("/")
     } catch (err) {
       console.error(err, error);
     }
-
   };
 
   const mystyle = {
