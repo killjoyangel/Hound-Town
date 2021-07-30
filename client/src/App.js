@@ -9,6 +9,7 @@ import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import "./App.css";
 import Signup from "./pages/Signup";
+import Home from "./pages/Home";
 import Login from "./pages/Login";
 import AddPet from "./pages/AddPet";
 import MyNavbar from "./components/Navbar";
@@ -48,6 +49,9 @@ function App () {
         <div className="container">
         <h1>Your Puppy Party Portal</h1>
         <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
         <Route exact path="/Signup">
           <Signup />
         </Route>
