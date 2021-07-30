@@ -10,7 +10,7 @@ const NewPlayDate = (props) => {
   const [location, setLocation] = useState("");
   const [description, setDescription] = useState("");
 
-  // const status = useContext(StatusContext);
+
   const user = useContext(UserContext);
 
   const handleSubmit = (event) => {
