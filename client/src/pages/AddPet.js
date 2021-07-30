@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 import ProfileForm from "./ProfileForm";
+import {useMutation} from "@apollo/client";
+import {ADD_PET} from "../utils/mutations";
 
 const AddPet = (props) => {
   const [dogBreed, setBreed] = useState("");
@@ -8,19 +10,21 @@ const AddPet = (props) => {
   const [dogGender, setGender] = useState("");
   const [dogName, setName] = useState("");
   
+  const [addPet, {error}]  = useMutation(ADD_PET) 
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    axios
-      .post("/api/profiles", { dogBreed,dogAge, dogGender, dogName})
-      .then((response) => {
-        // console.log(response.data);
-        // When clicking submit will redirect to profile page
-        props.history.push("/profile");
-      })
-      .catch((err) => {
-        console.log(err);
+    try {
+      const { data } = await addPet({
+        variables: {
+          dogAge, dogBreed, dogGender, dogName,
+        },
       });
+      console.log(data)
+    } catch (err) {
+      console.error(err, error);
+    }
+
   };
 
   const mystyle = {
