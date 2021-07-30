@@ -27,9 +27,6 @@ addUser(username: $username, password: $password, email: $email) {
 export const ADD_PET = gql`
 mutation addPet($petData: petInput!) {
   addPet(petData: $petData) {
-    # _id
-    # username
-    # email
     pets {
       dogBreed
       dogAge

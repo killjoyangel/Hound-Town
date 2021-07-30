@@ -14,7 +14,6 @@ import AddPet from "./pages/AddPet";
 import MyNavbar from "./components/Navbar";
 import FindAFriend from "./pages/FindAFriend";
 import MeetUps from "./pages/MeetUps";
-import Events from "./pages/Events";
 
 
 // Construct our main GraphQL API endpoint
@@ -63,9 +62,6 @@ function App () {
          </Route>
          <Route exact path="/MeetUps">
          <MeetUps/>
-         </Route>
-         <Route exact path="/Events">
-         <Events/>
          </Route>
          </Switch>
          </div>

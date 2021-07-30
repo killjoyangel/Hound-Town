@@ -43,39 +43,27 @@ const resolvers = {
 
       return { token, user };
     },
-
-    // addUser: async (parent, { username, email, password }) => {
-    //   const user = await User.create({ username, email, password });
-    //   const token = signToken(user);
-    //   return { token, user };
-    // },
     
-    addPet: async (parent, {petText}, context) => {
-      if (context.user) {
-        const updatedUser = await User.findByIdAndUpdate(
-          { _id: context.user._id },
-          { $addToSet: { addPet: petData } },
-          { new: true }
+    addPet: async (parent, args, context) => {
+        if (context.user) {
+        const pet = await Pet.create(
+          args
         );
-        return updatedUser;
-      }
-      throw new AuthenticationError("You need to be logged in!");
+        return pet;
+        }
+      throw new AuthenticationError('You need to be logged in!');
     },
     //   if (context.user) {
-    //     const pet = await Pet.create({
-    //       petText,
-    //       petAuthor: context.user.username,
-    //     });
-
-    //     await User.findOneAndUpdate(
+    //     const updatedUser = await User.findByIdAndUpdate(
     //       { _id: context.user._id },
-    //       { $addToSet: { pets: pet._id } }
+    //       { $addToSet: { addPet: petData } },
+    //       { new: true }
     //     );
-
-    //     return pet;
+    //     return updatedUser;
     //   }
-    //   throw new AuthenticationError('You need to be logged in!');
+    //   throw new AuthenticationError("You need to be logged in!");
     // },
+    
     removePet: async (parent, { petId }, context) => {
       if (context.user) {
         const pet = await Pet.findOneAndDelete({
@@ -92,8 +80,10 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
+
 }
 }
+
 
 
 module.exports = resolvers;

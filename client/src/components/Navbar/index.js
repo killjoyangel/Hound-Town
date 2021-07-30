@@ -15,29 +15,10 @@ function MyNavbar () {
     user.handleLogin("");
     history.replace("/Login");
   }
-
+console.log(Auth.loggedIn())
   return (
 
-//       <div>
-//         <Navbar>
-// <Container>
-//                 <NavLink exact to="/">Hound Town</NavLink>
 
-//                 <NavLink to="/AddPet">Add Pet</NavLink>
-
-//                 <NavLink to="/Petprofile">Pet Profile</NavLink>
-
-//                 <NavLink to="/SavePetProfile">Matches</NavLink>
-
-//                 <NavLink to="/Signup">Sign Up</NavLink>
-
-//                 <NavLink to="/Login">Login</NavLink>
-//  <p className="mx-1" onClick={handleLogout}>
-//    <NavLink to="/">Logout</NavLink>
-//  </p> 
-//  </Container>
-//  </Navbar>
-// </div>
 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
   <Container>
   <Navbar.Brand as={NavLink} exact to="/">Hound Town</Navbar.Brand>
@@ -45,12 +26,10 @@ function MyNavbar () {
   <Navbar.Collapse id="responsive-navbar-nav">
   <Nav className="me-auto">
       <Nav.Link as={NavLink} to="/Signup">Signup</Nav.Link>
-      <Nav.Link as={NavLink} to="/Signup">Login</Nav.Link>
       {Auth.loggedIn() ?  <Nav.Link as={NavLink} to="/Login" onClick={handleLogout}>Logout</Nav.Link> : <Nav.Link as={NavLink} to="/Login">Login</Nav.Link>}
       <Nav.Link as={NavLink} to="/AddPet">Add Pet</Nav.Link>
       <Nav.Link as={NavLink} to="/FindAFriend">FindAFriend</Nav.Link>
       <Nav.Link as={NavLink} to="/MeetUps">MeetUps</Nav.Link>   
-      <Nav.Link as={NavLink} to="/Events">Events</Nav.Link> 
     </Nav>
   </Navbar.Collapse>
   </Container>
