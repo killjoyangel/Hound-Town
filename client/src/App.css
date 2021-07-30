@@ -12,9 +12,32 @@
   }
 
 .login {
-  border: solid;
+  border: 5px solid black;
+  width: 60%;
+  padding: 25px;
+  position: fixed;
 }
 
 .signup {
-  border: solid;
+  border: 5px solid black;
+  width: 60%;
+  padding: 25px;
+  position: fixed;
+
+}
+
+.btn {
+  font: bold 15px Arial;
+  text-decoration: none;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #333333;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #333333;
+}
+
+@media (max-width: 901px) {
+  #previousSearch {
+    max-height: 152px;
+  }
 }
