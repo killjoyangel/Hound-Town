@@ -13,8 +13,8 @@ const ProfileForm = (props) => {
             id="profileName"
             type="text"
             placeholder="Dog Name"
-            name="name"
-            value={props.name}
+            name="dogName"
+            value={props.dogName}
             onChange={(event) => {
               props.setName(event.target.value);
             }}
