@@ -30,7 +30,7 @@ const Home = () => {
       ) : (
         <p>Please sign in</p>
       )}
-      <h3>ALL PETS</h3>
+      <h3>Furry Friends</h3>
       {allPets &&
         allPets.map((pet) => (
           <div key={pet._id}>
