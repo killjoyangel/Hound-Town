@@ -1,4 +1,5 @@
 import React from "react";
+import "../App.css";
 
 const MeetUpForm = (props) => {
   return (
@@ -7,7 +8,7 @@ const MeetUpForm = (props) => {
         className="text-center border border-light p-5"
         onSubmit={props.handleSubmit}
       >
-        <div className="row">
+        <div className="event">
           <input
             className="form-control"
             id="eventName"
@@ -21,7 +22,7 @@ const MeetUpForm = (props) => {
           />
         </div>
         <br />
-        <div className="row">
+        <div className="event">
           <input
             className="form-control"
             id="date"
@@ -34,7 +35,7 @@ const MeetUpForm = (props) => {
           />
         </div>
         <br />
-        <div className="row">
+        <div className="event">
           <input
             className="form-control"
             id="location"
@@ -48,7 +49,7 @@ const MeetUpForm = (props) => {
           />
         </div>
         <br />
-        <div className="row">
+        <div className="event">
           <textarea
             className="form-control rounded-0"
             rows="10"
@@ -61,7 +62,7 @@ const MeetUpForm = (props) => {
             }}
           />
         </div>
-        <button type="submit" className="btn btn-light-blue">
+        <button type="submit" className="btn btn-black">
           Submit
         </button>
       </form>

@@ -31,16 +31,11 @@ const NewPlayDate = (props) => {
         console.log(err);
       });
   };
-  const mystyle = {
-    color: "white",
-    backgroundColor: "rgb(124, 67, 189, .5)",
-    padding: "10px",
-    fontFamily: "Arial",
-    maxLength: "100%",
-  };
+
 
   return (
-    <div className="container" style={mystyle}>
+    <div className="container">
+      <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet"/>
       <h1>Submit an Event Idea</h1>
       <MeetUpForm
         handleSubmit={handleSubmit}

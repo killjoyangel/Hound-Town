@@ -34,16 +34,10 @@ const AddPet = (props) => {
     }
   };
 
-  const mystyle = {
-    color: "white",
-    backgroundColor: "rgb(124, 67, 189, .5)",
-    padding: "10px",
-    fontFamily: "Arial",
-    maxLength: "100%",
-  };
-
   return (
-    <div className="container" style={mystyle}>
+    <div className="container">
+       <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet"/>
+       <fieldset>
       <h1>Pet Info</h1>
       <ProfileForm
         handleSubmit={handleSubmit}
@@ -56,6 +50,7 @@ const AddPet = (props) => {
         dogGender={dogGender}
         dogName={dogName}
       />
+      </fieldset>
     </div>
   );
 };
