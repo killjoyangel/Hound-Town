@@ -44,10 +44,12 @@ const client = new ApolloClient({
 function App () {
     return (
       <ApolloProvider client={client}>
-        <Router>
+        <Router>\
+        <div className="home"></div>
         <MyNavbar/>
-        <div className="container">
+        <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet"/>
         <h1>Your Puppy Party Portal</h1>
+        <div className="container">
         <Switch>
         <Route exact path="/">
           <Home />

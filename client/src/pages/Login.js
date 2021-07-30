@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Form, Button, Alert } from "react-bootstrap";
-
+  import { Form, Button, Alert } from "react-bootstrap";
+import "../App.css";
 import { useMutation } from "@apollo/client";
 
 import { LOGIN_USER } from "../utils/mutations";
@@ -55,6 +55,7 @@ const Login = () => {
 
   return (
     <>
+    <div className="login">
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         <Alert
           dismissible
@@ -99,8 +100,9 @@ const Login = () => {
           variant="success"
         >
           Submit
-        </Button>
-      </Form>
+        </Button> 
+         </Form>
+    </div>
     </>
   );
 };

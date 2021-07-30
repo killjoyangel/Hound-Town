@@ -19,12 +19,12 @@ console.log(Auth.loggedIn())
   return (
 
 
-<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-  <Container>
+<Navbar collapseOnSelect expand="lg">
+  <Container className="me-auto">
   <Navbar.Brand as={NavLink} exact to="/">Hound Town</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
-  <Nav className="me-auto">
+  <Nav>
       <Nav.Link as={NavLink} to="/Signup">Signup</Nav.Link>
       {Auth.loggedIn() ?  <Nav.Link as={NavLink} to="/Login" onClick={handleLogout}>Logout</Nav.Link> : <Nav.Link as={NavLink} to="/Login">Login</Nav.Link>}
       <Nav.Link as={NavLink} to="/AddPet">Add Pet</Nav.Link>
@@ -34,7 +34,6 @@ console.log(Auth.loggedIn())
   </Navbar.Collapse>
   </Container>
 </Navbar>
-
   );
 }
 
