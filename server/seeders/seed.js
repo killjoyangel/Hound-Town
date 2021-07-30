@@ -9,8 +9,8 @@ db.once('open', async () => {
 
   const pets = await Pet.insertMany(petSeeds);
   const users = await User.insertMany(userSeeds);
-  // tempUser.petSeeds.push(newPet._id);
-  // await tempUser.save();
+  // tempUser.petSeeds.push(newPet._id);\\
+  // await tempUser.save();\\
   console.log('everything seeded!');
   process.exit(0);
 });
