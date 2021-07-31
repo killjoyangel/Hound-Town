@@ -2,7 +2,7 @@
 
 Welcome to Hound Town! A safe space to meet other pet owners and post and find pet events in your area. 
 
-This MERN stack single-page application concept was designed to be a doggie play date application. Hound Town displays the users pet information, allows the user to submit and post events, is also a place for the user to find pet events in a desired area and allows them to be able to contact and arrange playdates.
+This MERN stack single-page application concept was designed to be a doggie play date application. Hound Town displays the users pet information, allows the user to submit and post events, is also a place for the user to find pet events in a their desired area and allows them to be able to contact and arrange playdates.
 
 # Table of Contents
 1. [Title](Title)
