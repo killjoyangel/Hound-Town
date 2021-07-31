@@ -1,6 +1,8 @@
 # Project-3-Unit-23
 
-As a user, I would like to meet other pet owners and post and find pet events in my area. The concept was to design a doggie play date app that displays the pet information, allows the user to submit + post events, have a place for the user to find pet events in a desired area and to contact pet owners and arrange playdates.
+Welcome to Hound Town! A safe space to meet other pet owners and post and find pet events in your area. 
+
+The concept was to design a doggie play date app that displays the pet information, allows the user to submit and  post events, a place for the user to find pet events in a desired area and to contact pet owners and arrange playdates.
 
 # Table of Contents
 1. [Title](Title)
@@ -15,16 +17,29 @@ As a user, I would like to meet other pet owners and post and find pet events in
 I used 'npm i' to insall all required pacakages.
 # Contribution
 <a href="https://github.com/Lyndseyfin">Lyndsey Finamore</a>
+<br>
 <a href="https://github.com/RLacer">Rebecca Lacer</a>
-<a href="https://github.com/killjoyangel">Ariel Merchand</a>
+<br>
+<a href="https://github.com/killjoyangel">Ariel Marchand</a>
+<br>
 <a href="https://github.com/CobaltFrostfish">Chris Whalen</a>
+<br>
 <a href="https://github.com/CoderLeE920">Thai Lee</a>
 # Questions
 ## GitHub 
 <a href="https://github.com/killjoyangel/Hound-Town"></a>
 
-## Email 
- lyndseyfinamore@gmail.com
+## Team Emails
+ lyndseyfinamore@gmail.com -Lyndsey
+ <br>
+ r.a.lacer@hotmail.com -Rebecca
+ <br>
+ Killjoydesigner@gmail.com -Ariel
+ <br>
+ Chris.Whalen37@gmail.com -Chris
+ <br>
+ leethai52@outlook.com -Thai
+
 ## License
 ![GitHub license](https://img.shields.io/badge/license-MIT-brightgreen)
 ## Heroku
