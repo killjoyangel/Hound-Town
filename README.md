@@ -2,7 +2,7 @@
 
 Welcome to Hound Town! A safe space to meet other pet owners and post and find pet events in your area. 
 
-The concept was to design a doggie play date app that displays the pet information, allows the user to submit and  post events, a place for the user to find pet events in a desired area and to contact pet owners and arrange playdates.
+This MERN stack single-page application concept was designed to be a doggie play date application. Hound Town displays the users pet information, allows the user to submit and post events, is also a place for the user to find pet events in a desired area and allows them to be able to contact and arrange playdates.
 
 # Table of Contents
 1. [Title](Title)
@@ -14,7 +14,7 @@ The concept was to design a doggie play date app that displays the pet informati
 7. [Heroku](#Heroku)
 8. [Screenshot](#screenshot)
 # Installation 
-I used 'npm i' to insall all required pacakages.
+npm install
 # Contribution
 <a href="https://github.com/Lyndseyfin">Lyndsey Finamore</a>
 <br>
@@ -26,8 +26,9 @@ I used 'npm i' to insall all required pacakages.
 <br>
 <a href="https://github.com/CoderLeE920">Thai Lee</a>
 # Questions
-## GitHub 
-<a href="https://github.com/killjoyangel/Hound-Town"></a>
+
+## GitHub Application Repo
+<a href="https://github.com/killjoyangel/Hound-Town">Hound Town</a>
 
 ## Team Emails
  lyndseyfinamore@gmail.com -Lyndsey
