@@ -56,6 +56,11 @@ li{
   border-left: 1px solid #333333;
 }
 
+.h4 {
+  font-size: 25px;
+  font-weight: bolder;
+}
+
 @media (max-width: 901px) {
   #previousSearch {
     max-height: 152px;
