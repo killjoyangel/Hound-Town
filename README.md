@@ -1,8 +1,8 @@
 # Project-3-Unit-23
 
-Welcome to Hound Town! A safe space to meet other pet owners and post and find pet events in your area. 
+Welcome to Hound Town! A safe space to meet other pet owners and to find + create pet events in your area. 
 
-This MERN stack single-page application concept was designed to be a doggie play date application. Hound Town displays the users pet information, allows the user to submit and post events, is also a place for the user to find pet events in a their desired area and allows them to be able to contact and arrange playdates.
+This MERNG (MongoDB, Express.js, React.js, Nodejs, Graphql) stack single-page application concept was designed to be a doggie play date application. Hound Town displays the users pet information, allows the user to submit and post events, is also a place for the user to find pet events in a their desired area and allows them to be able to contact and arrange playdates.
 
 # Table of Contents
 1. [Title](Title)
@@ -44,7 +44,7 @@ npm install
 ## License
 ![GitHub license](https://img.shields.io/badge/license-MIT-brightgreen)
 ## Heroku
-<a href="">Hound Town</a>
+<a href="https://guarded-earth-72226.herokuapp.com/">Hound Town</a>
 
 ## Screenshot
 ![screenshot](client/public/images/ss.jpg)

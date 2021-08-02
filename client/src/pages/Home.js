@@ -1,6 +1,6 @@
 import React from "react";
 // import {Container} from 'react-bootstrap'
-import "../App.css"
+import "../App.css";
 import { useQuery } from "@apollo/client";
 import { GET_ME, QUERY_PETS } from "../utils/queries";
 
@@ -25,7 +25,7 @@ const Home = () => {
       />
       {user ? (
         <>
-          <h2>Welcome {user.username}!</h2>
+          <h2>Welcome, {user.username}!</h2>
         </>
       ) : (
         <p>Please sign in</p>
