@@ -16,7 +16,6 @@ import MyNavbar from "./components/Navbar";
 import FindAFriend from "./pages/FindAFriend";
 import MeetUps from "./pages/MeetUps";
 
-
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -41,6 +40,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+
 function App () {
     return (
       <ApolloProvider client={client}>
@@ -48,7 +48,6 @@ function App () {
         <div className="home"></div>
         <MyNavbar/>
         <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet"/>
-        <h1>Your Puppy Party Portal</h1>
         <div className="container">
         <Switch>
         <Route exact path="/">
