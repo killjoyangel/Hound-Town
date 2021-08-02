@@ -44,7 +44,7 @@ const client = new ApolloClient({
 function App () {
     return (
       <ApolloProvider client={client}>
-        <Router>\
+        <Router>
         <div className="home"></div>
         <MyNavbar/>
         <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet"/>
