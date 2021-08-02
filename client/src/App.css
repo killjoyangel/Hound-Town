@@ -1,7 +1,7 @@
 .container {
     text-align: center;
     background-image: url("https://www.readersdigest.ca/wp-content/uploads/2019/09/group-of-dogs-on-blue-background.jpg");
-    position: fixed;
+    /* position: fixed; */
     min-width: 100%;
     min-height: 100%;
     background-size: cover;
@@ -41,6 +41,9 @@
   font-size: 16px;
   background-color:lavenderblush;
   margin: auto;
+}
+li{
+  list-style-type: none;
 }
 
 .btn {
