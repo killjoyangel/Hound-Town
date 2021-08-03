@@ -8,7 +8,7 @@ import Auth from "../utils/auth";
 
 const Login = () => {
   const [userFormData, setUserFormData] = useState({ email: "", password: "" });
-  const [validated] = useState(false);
+  // const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
 
   const [login, { error }] = useMutation(LOGIN_USER);
@@ -33,7 +33,7 @@ const Login = () => {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
-      event.stopPropagation();
+      // event.stopPropagation();
     }
     try {
       const { data } = await login({
@@ -47,7 +47,7 @@ const Login = () => {
     }
 
     setUserFormData({
-      username: "",
+      // username: "",
       email: "",
       password: "",
     });
@@ -56,7 +56,9 @@ const Login = () => {
   return (
     <>
     <div className="login">
-      <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
+      <Form 
+      // noValidate validated={validated} 
+      onSubmit={handleFormSubmit}>
         <Alert
           dismissible
           onClose={() => setShowAlert(false)}
