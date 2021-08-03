@@ -55,16 +55,6 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in!");
     },
-    //   if (context.user) {
-    //     const updatedUser = await User.findByIdAndUpdate(
-    //       { _id: context.user._id },
-    //       { $addToSet: { addPet: petData } },
-    //       { new: true }
-    //     );
-    //     return updatedUser;
-    //   }
-    //   throw new AuthenticationError("You need to be logged in!");
-    // },
 
     removePet: async (parent, { petId }, context) => {
       if (context.user) {

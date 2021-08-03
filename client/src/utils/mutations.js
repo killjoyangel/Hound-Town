@@ -35,7 +35,6 @@ export const ADD_PET = gql`
     }
   }
 `;
-
 export const REMOVE_PET = gql`
   mutation removePet($petId: ID!) {
     removePet(petId: $petId) {
