@@ -11,6 +11,9 @@ function MyNavbar () {
   const history = useHistory();
 
   function handleLogout() {
+    localStorage.removeItem('id_token');
+    window.location.reload();
+
     // console.log("handle logout")
     user.handleLogin("");
     history.replace("/Login");
