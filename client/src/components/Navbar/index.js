@@ -12,7 +12,7 @@ function MyNavbar () {
 
   function handleLogout() {
     localStorage.removeItem('id_token');
-    window.location.reload();
+    // window.location.reload();
 
     // console.log("handle logout")
     user.handleLogin("");
