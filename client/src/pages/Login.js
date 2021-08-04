@@ -33,7 +33,7 @@ const Login = () => {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
-      // event.stopPropagation();
+      event.stopPropagation();
     }
     try {
       const { data } = await login({
